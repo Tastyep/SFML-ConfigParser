@@ -17,7 +17,8 @@ file (GLOB headers "*.h")
 file (GLOB sources "*.cpp")
 
 set (DIRS ${PROJECT_SOURCE_DIR}/inc
-          ${PROJECT_SOURCE_DIR}/src)
+          ${PROJECT_SOURCE_DIR}/src
+          ${PROJECT_SOURCE_DIR}/example)
 
 foreach (dir ${DIRS})
    file (GLOB h_${dir} "${dir}/*.h")

@@ -20,8 +20,7 @@ class Window {
       this->close();
     }
     auto parsingModule = _parser.module("bind");
-    auto bindModule =
-      std::static_pointer_cast<ConfigParser::BindModule<sf::Keyboard::Key, ConfigParser::Action>>(parsingModule);
+    auto bindModule = std::static_pointer_cast<ConfigParser::BindModule<sf::Keyboard::Key, Action>>(parsingModule);
     auto bindMapping = bindModule->mapping();
 
     for (const auto& mapping : bindMapping) {
@@ -39,7 +38,6 @@ class Window {
 
   void init() {
     using Key = sf::Keyboard::Key;
-    using Action = ConfigParser::Action;
 
     auto bindModule = std::make_shared<ConfigParser::BindModule<Key, Action>>();
 

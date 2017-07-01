@@ -4,8 +4,6 @@
 #include <iostream>
 #include <type_traits>
 
-namespace ConfigParser {
-
 // clang-format off
 enum class Action {
   ESCAPE,
@@ -22,7 +20,5 @@ inline std::ostream& operator<<(std::ostream& os, Action action) {
   os << static_cast<std::underlying_type<Action>::type>(action);
   return os;
 }
-
-} /* namespace ConfigParser */
 
 #endif
